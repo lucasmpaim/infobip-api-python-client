@@ -21,28 +21,28 @@ class ApiRequestErrorDetails(object):
 
 
 class ApiRequestError(object):
-    clientCorrelator = ""
+    client_correlator = ""
     serviceException = ApiRequestErrorDetails()
 
-    def __init__(self, clientCorrelator="", serviceException=ApiRequestErrorDetails()):
-        self.clientCorrelator = clientCorrelator
+    def __init__(self, client_correlator="", serviceException=ApiRequestErrorDetails()):
+        self.client_correlator = client_correlator
         self.serviceException = serviceException
 
     def __str__(self):
         return "ApiRequestError: {" \
-               "clientCorrelator = \"" + str(self.clientCorrelator) + "\", " \
-                                                                      "serviceException = " + str(
+               "clientCorrelator = \"" + str(self.client_correlator) + "\", " \
+                                                                       "serviceException = " + str(
             self.serviceException) + "" \
                                      "}"
 
 
 class ApiException(Exception):
-    requestError = ApiRequestError()
+    request_error = ApiRequestError()
 
-    def __init__(self, requestError=ApiRequestError()):
-        self.requestError = requestError
+    def __init__(self, request_error=ApiRequestError()):
+        self.request_error = request_error
 
     def __str__(self):
         return "ApiException: {" \
-               "requestError = " + str(self.requestError) + "" \
+               "requestError = " + str(self.request_error) + "" \
                                                             "}"

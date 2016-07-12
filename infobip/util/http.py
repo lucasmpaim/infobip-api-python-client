@@ -4,7 +4,7 @@ from infobip.util.exception import ApiException, ApiRequestError, ApiRequestErro
 
 __author__ = 'mstipanov'
 
-from . import http.client
+import http.client
 import urllib.request, urllib.parse, urllib.error
 import json
 from urllib.parse import urlparse
