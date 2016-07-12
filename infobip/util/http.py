@@ -57,7 +57,8 @@ class HttpClient:
 
         headers = {}
         if username:
-            auth = base64.encodebytes('%s:%s' % (username, password)).replace('\n', '')
+            auth = base64.encodebytes(bytes('%s:%s'.format(username, password), 'utf-8')).decode('utf-8').replace('\n',
+                                                                                                                  '')
             headers["Authorization"] = "Basic %s" % auth
 
         if api_key:
