@@ -8,7 +8,7 @@ from datetime import datetime
 from infobip.util.models import DefaultObject, serializable
 class Status(DefaultObject):
     @property
-    @serializable(name="groupName", type=unicode)
+    @serializable(name="groupName", type=str)
     def group_name(self):
         return self.get_field_value("group_name")
 
@@ -34,7 +34,7 @@ class Status(DefaultObject):
         return self
 
     @property
-    @serializable(name="name", type=unicode)
+    @serializable(name="name", type=str)
     def name(self):
         return self.get_field_value("name")
 
@@ -47,7 +47,7 @@ class Status(DefaultObject):
         return self
 
     @property
-    @serializable(name="description", type=unicode)
+    @serializable(name="description", type=str)
     def description(self):
         return self.get_field_value("description")
 
@@ -60,7 +60,7 @@ class Status(DefaultObject):
         return self
 
     @property
-    @serializable(name="action", type=unicode)
+    @serializable(name="action", type=str)
     def action(self):
         return self.get_field_value("action")
 

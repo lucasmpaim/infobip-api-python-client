@@ -10,7 +10,7 @@ from infobip.api.model.sms.mt.send.SMSData import SMSData
 
 class SMSAdvancedBinaryRequest(DefaultObject):
     @property
-    @serializable(name="bulkId", type=unicode)
+    @serializable(name="bulkId", type=str)
     def bulk_id(self):
         return self.get_field_value("bulk_id")
 
@@ -52,7 +52,7 @@ class SMSAdvancedBinaryRequest(DefaultObject):
         return self
 
     @property
-    @serializable(name="tracking", type=unicode)
+    @serializable(name="tracking", type=str)
     def tracking(self):
         return self.get_field_value("tracking")
 

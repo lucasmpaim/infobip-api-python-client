@@ -8,7 +8,7 @@ from datetime import datetime
 from infobip.util.models import DefaultObject, serializable
 class SMSTextualRequest(DefaultObject):
     @property
-    @serializable(name="campaignId", type=unicode)
+    @serializable(name="campaignId", type=str)
     def campaign_id(self):
         return self.get_field_value("campaign_id")
 
@@ -21,7 +21,7 @@ class SMSTextualRequest(DefaultObject):
         return self
 
     @property
-    @serializable(name="from", type=unicode)
+    @serializable(name="from", type=str)
     def from_(self):
         return self.get_field_value("from_")
 
@@ -34,7 +34,7 @@ class SMSTextualRequest(DefaultObject):
         return self
 
     @property
-    @serializable(name="to", type=unicode, list=True)
+    @serializable(name="to", type=str, list=True)
     def to(self):
         return self.get_field_value("to")
 
@@ -63,7 +63,7 @@ class SMSTextualRequest(DefaultObject):
         return self
 
     @property
-    @serializable(name="text", type=unicode)
+    @serializable(name="text", type=str)
     def text(self):
         return self.get_field_value("text")
 
@@ -76,7 +76,7 @@ class SMSTextualRequest(DefaultObject):
         return self
 
     @property
-    @serializable(name="transliteration", type=unicode)
+    @serializable(name="transliteration", type=str)
     def transliteration(self):
         return self.get_field_value("transliteration")
 

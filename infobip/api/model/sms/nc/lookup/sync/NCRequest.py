@@ -8,7 +8,7 @@ from datetime import datetime
 from infobip.util.models import DefaultObject, serializable
 class NCRequest(DefaultObject):
     @property
-    @serializable(name="to", type=unicode, list=True)
+    @serializable(name="to", type=str, list=True)
     def to(self):
         return self.get_field_value("to")
 

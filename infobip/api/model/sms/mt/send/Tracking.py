@@ -7,7 +7,7 @@ TODO: Point to Github contribution instructions
 from infobip.util.models import DefaultObject, serializable
 class Tracking(DefaultObject):
     @property
-    @serializable(name="processKey", type=unicode)
+    @serializable(name="processKey", type=str)
     def process_key(self):
         return self.get_field_value("process_key")
 
@@ -20,7 +20,7 @@ class Tracking(DefaultObject):
         return self
 
     @property
-    @serializable(name="track", type=unicode)
+    @serializable(name="track", type=str)
     def track(self):
         return self.get_field_value("track")
 
@@ -33,7 +33,7 @@ class Tracking(DefaultObject):
         return self
 
     @property
-    @serializable(name="type", type=unicode)
+    @serializable(name="type", type=str)
     def type(self):
         return self.get_field_value("type")
 

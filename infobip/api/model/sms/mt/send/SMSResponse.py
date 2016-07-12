@@ -10,7 +10,7 @@ from infobip.api.model.sms.mt.send.SMSResponseDetails import SMSResponseDetails
 
 class SMSResponse(DefaultObject):
     @property
-    @serializable(name="bulkId", type=unicode)
+    @serializable(name="bulkId", type=str)
     def bulk_id(self):
         return self.get_field_value("bulk_id")
 

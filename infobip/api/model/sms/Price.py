@@ -36,7 +36,7 @@ class Price(DefaultObject):
         return self
 
     @property
-    @serializable(name="currency", type=unicode)
+    @serializable(name="currency", type=str)
     def currency(self):
         return self.get_field_value("currency")
 

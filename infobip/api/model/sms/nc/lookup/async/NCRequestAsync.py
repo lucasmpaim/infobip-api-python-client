@@ -8,7 +8,7 @@ from datetime import datetime
 from infobip.util.models import DefaultObject, serializable
 class NCRequestAsync(DefaultObject):
     @property
-    @serializable(name="notifyUrl", type=unicode)
+    @serializable(name="notifyUrl", type=str)
     def notify_url(self):
         return self.get_field_value("notify_url")
 
@@ -21,7 +21,7 @@ class NCRequestAsync(DefaultObject):
         return self
 
     @property
-    @serializable(name="to", type=unicode, list=True)
+    @serializable(name="to", type=str, list=True)
     def to(self):
         return self.get_field_value("to")
 
@@ -50,7 +50,7 @@ class NCRequestAsync(DefaultObject):
         return self
 
     @property
-    @serializable(name="notifyContentType", type=unicode)
+    @serializable(name="notifyContentType", type=str)
     def notify_content_type(self):
         return self.get_field_value("notify_content_type")
 

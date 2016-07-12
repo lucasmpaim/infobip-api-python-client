@@ -13,7 +13,7 @@ from infobip.api.model.sms.mt.send.IsFlash import IsFlash
 
 class SMSData(DefaultObject):
     @property
-    @serializable(name="campaignId", type=unicode)
+    @serializable(name="campaignId", type=str)
     def campaign_id(self):
         return self.get_field_value("campaign_id")
 
@@ -26,7 +26,7 @@ class SMSData(DefaultObject):
         return self
 
     @property
-    @serializable(name="from", type=unicode)
+    @serializable(name="from", type=str)
     def from_(self):
         return self.get_field_value("from_")
 
@@ -94,7 +94,7 @@ class SMSData(DefaultObject):
         return self
 
     @property
-    @serializable(name="notifyContentType", type=unicode)
+    @serializable(name="notifyContentType", type=str)
     def notify_content_type(self):
         return self.get_field_value("notify_content_type")
 
@@ -107,7 +107,7 @@ class SMSData(DefaultObject):
         return self
 
     @property
-    @serializable(name="validityPeriod", type=long)
+    @serializable(name="validityPeriod", type=int)
     def validity_period(self):
         return self.get_field_value("validity_period")
 
@@ -133,7 +133,7 @@ class SMSData(DefaultObject):
         return self
 
     @property
-    @serializable(name="callbackData", type=unicode)
+    @serializable(name="callbackData", type=str)
     def callback_data(self):
         return self.get_field_value("callback_data")
 
@@ -146,7 +146,7 @@ class SMSData(DefaultObject):
         return self
 
     @property
-    @serializable(name="notifyUrl", type=unicode)
+    @serializable(name="notifyUrl", type=str)
     def notify_url(self):
         return self.get_field_value("notify_url")
 
@@ -159,7 +159,7 @@ class SMSData(DefaultObject):
         return self
 
     @property
-    @serializable(name="to", type=unicode, list=True)
+    @serializable(name="to", type=str, list=True)
     def to(self):
         return self.get_field_value("to")
 
@@ -188,7 +188,7 @@ class SMSData(DefaultObject):
         return self
 
     @property
-    @serializable(name="text", type=unicode)
+    @serializable(name="text", type=str)
     def text(self):
         return self.get_field_value("text")
 
@@ -214,7 +214,7 @@ class SMSData(DefaultObject):
         return self
 
     @property
-    @serializable(name="transliteration", type=unicode)
+    @serializable(name="transliteration", type=str)
     def transliteration(self):
         return self.get_field_value("transliteration")
 

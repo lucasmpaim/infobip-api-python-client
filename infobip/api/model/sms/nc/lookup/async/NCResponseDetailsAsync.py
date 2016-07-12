@@ -10,7 +10,7 @@ from infobip.api.model.sms.Status import Status
 
 class NCResponseDetailsAsync(DefaultObject):
     @property
-    @serializable(name="messageId", type=unicode)
+    @serializable(name="messageId", type=str)
     def message_id(self):
         return self.get_field_value("message_id")
 
@@ -23,7 +23,7 @@ class NCResponseDetailsAsync(DefaultObject):
         return self
 
     @property
-    @serializable(name="to", type=unicode)
+    @serializable(name="to", type=str)
     def to(self):
         return self.get_field_value("to")
 

@@ -38,7 +38,7 @@ class SMSReport(DefaultObject):
         return self
 
     @property
-    @serializable(name="from", type=unicode)
+    @serializable(name="from", type=str)
     def from_(self):
         return self.get_field_value("from_")
 
@@ -51,7 +51,7 @@ class SMSReport(DefaultObject):
         return self
 
     @property
-    @serializable(name="messageId", type=unicode)
+    @serializable(name="messageId", type=str)
     def message_id(self):
         return self.get_field_value("message_id")
 
@@ -90,7 +90,7 @@ class SMSReport(DefaultObject):
         return self
 
     @property
-    @serializable(name="bulkId", type=unicode)
+    @serializable(name="bulkId", type=str)
     def bulk_id(self):
         return self.get_field_value("bulk_id")
 
@@ -103,7 +103,7 @@ class SMSReport(DefaultObject):
         return self
 
     @property
-    @serializable(name="mccmnc", type=unicode)
+    @serializable(name="mccmnc", type=str)
     def mccmnc(self):
         return self.get_field_value("mccmnc")
 
@@ -129,7 +129,7 @@ class SMSReport(DefaultObject):
         return self
 
     @property
-    @serializable(name="callbackData", type=unicode)
+    @serializable(name="callbackData", type=str)
     def callback_data(self):
         return self.get_field_value("callback_data")
 
@@ -142,7 +142,7 @@ class SMSReport(DefaultObject):
         return self
 
     @property
-    @serializable(name="to", type=unicode)
+    @serializable(name="to", type=str)
     def to(self):
         return self.get_field_value("to")
 
@@ -155,7 +155,7 @@ class SMSReport(DefaultObject):
         return self
 
     @property
-    @serializable(name="text", type=unicode)
+    @serializable(name="text", type=str)
     def text(self):
         return self.get_field_value("text")
 

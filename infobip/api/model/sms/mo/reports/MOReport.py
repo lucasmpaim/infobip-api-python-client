@@ -8,7 +8,7 @@ from datetime import datetime
 from infobip.util.models import DefaultObject, serializable
 class MOReport(DefaultObject):
     @property
-    @serializable(name="cleanText", type=unicode)
+    @serializable(name="cleanText", type=str)
     def clean_text(self):
         return self.get_field_value("clean_text")
 
@@ -34,7 +34,7 @@ class MOReport(DefaultObject):
         return self
 
     @property
-    @serializable(name="from", type=unicode)
+    @serializable(name="from", type=str)
     def from_(self):
         return self.get_field_value("from_")
 
@@ -47,7 +47,7 @@ class MOReport(DefaultObject):
         return self
 
     @property
-    @serializable(name="messageId", type=unicode)
+    @serializable(name="messageId", type=str)
     def message_id(self):
         return self.get_field_value("message_id")
 
@@ -60,7 +60,7 @@ class MOReport(DefaultObject):
         return self
 
     @property
-    @serializable(name="to", type=unicode)
+    @serializable(name="to", type=str)
     def to(self):
         return self.get_field_value("to")
 
@@ -73,7 +73,7 @@ class MOReport(DefaultObject):
         return self
 
     @property
-    @serializable(name="text", type=unicode)
+    @serializable(name="text", type=str)
     def text(self):
         return self.get_field_value("text")
 
@@ -86,7 +86,7 @@ class MOReport(DefaultObject):
         return self
 
     @property
-    @serializable(name="keyword", type=unicode)
+    @serializable(name="keyword", type=str)
     def keyword(self):
         return self.get_field_value("keyword")
 

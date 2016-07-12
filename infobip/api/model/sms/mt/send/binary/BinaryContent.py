@@ -21,7 +21,7 @@ class BinaryContent(DefaultObject):
         return self
 
     @property
-    @serializable(name="hex", type=unicode)
+    @serializable(name="hex", type=str)
     def hex(self):
         return self.get_field_value("hex")
 

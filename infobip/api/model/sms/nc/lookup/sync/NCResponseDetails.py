@@ -38,7 +38,7 @@ class NCResponseDetails(DefaultObject):
         return self
 
     @property
-    @serializable(name="mccMnc", type=unicode)
+    @serializable(name="mccMnc", type=str)
     def mcc_mnc(self):
         return self.get_field_value("mcc_mnc")
 
@@ -77,7 +77,7 @@ class NCResponseDetails(DefaultObject):
         return self
 
     @property
-    @serializable(name="to", type=unicode)
+    @serializable(name="to", type=str)
     def to(self):
         return self.get_field_value("to")
 
@@ -90,7 +90,7 @@ class NCResponseDetails(DefaultObject):
         return self
 
     @property
-    @serializable(name="imsi", type=unicode)
+    @serializable(name="imsi", type=str)
     def imsi(self):
         return self.get_field_value("imsi")
 
@@ -103,7 +103,7 @@ class NCResponseDetails(DefaultObject):
         return self
 
     @property
-    @serializable(name="servingMSC", type=unicode)
+    @serializable(name="servingMSC", type=str)
     def serving_m_s_c(self):
         return self.get_field_value("serving_m_s_c")
 

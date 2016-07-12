@@ -8,7 +8,7 @@ from datetime import datetime
 from infobip.util.models import DefaultObject, serializable
 class Network(DefaultObject):
     @property
-    @serializable(name="countryPrefix", type=unicode)
+    @serializable(name="countryPrefix", type=str)
     def country_prefix(self):
         return self.get_field_value("country_prefix")
 
@@ -21,7 +21,7 @@ class Network(DefaultObject):
         return self
 
     @property
-    @serializable(name="networkName", type=unicode)
+    @serializable(name="networkName", type=str)
     def network_name(self):
         return self.get_field_value("network_name")
 
@@ -34,7 +34,7 @@ class Network(DefaultObject):
         return self
 
     @property
-    @serializable(name="countryName", type=unicode)
+    @serializable(name="countryName", type=str)
     def country_name(self):
         return self.get_field_value("country_name")
 
@@ -47,7 +47,7 @@ class Network(DefaultObject):
         return self
 
     @property
-    @serializable(name="networkPrefix", type=unicode)
+    @serializable(name="networkPrefix", type=str)
     def network_prefix(self):
         return self.get_field_value("network_prefix")
 

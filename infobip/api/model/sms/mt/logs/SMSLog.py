@@ -25,7 +25,7 @@ class SMSLog(DefaultObject):
         return self
 
     @property
-    @serializable(name="bulkId", type=unicode)
+    @serializable(name="bulkId", type=str)
     def bulk_id(self):
         return self.get_field_value("bulk_id")
 
@@ -38,7 +38,7 @@ class SMSLog(DefaultObject):
         return self
 
     @property
-    @serializable(name="mccMnc", type=unicode)
+    @serializable(name="mccMnc", type=str)
     def mcc_mnc(self):
         return self.get_field_value("mcc_mnc")
 
@@ -77,7 +77,7 @@ class SMSLog(DefaultObject):
         return self
 
     @property
-    @serializable(name="from", type=unicode)
+    @serializable(name="from", type=str)
     def from_(self):
         return self.get_field_value("from_")
 
@@ -90,7 +90,7 @@ class SMSLog(DefaultObject):
         return self
 
     @property
-    @serializable(name="messageId", type=unicode)
+    @serializable(name="messageId", type=str)
     def message_id(self):
         return self.get_field_value("message_id")
 
@@ -103,7 +103,7 @@ class SMSLog(DefaultObject):
         return self
 
     @property
-    @serializable(name="to", type=unicode)
+    @serializable(name="to", type=str)
     def to(self):
         return self.get_field_value("to")
 
@@ -116,7 +116,7 @@ class SMSLog(DefaultObject):
         return self
 
     @property
-    @serializable(name="text", type=unicode)
+    @serializable(name="text", type=str)
     def text(self):
         return self.get_field_value("text")
 
